@@ -23,3 +23,4 @@
 - event loop itself is already some computation. (e.g: selector, proactor handle I/O events, some collections event loop keeps internally for the callbacks and so on). none of this is free, all of the computation we're doing here has a price
 - why asyncio provides better performance in the end is because as soon as there is networking involved, the actual network latency between server and client is typically orders of magnitude higher than the computational cost of maintaining an event loop and splitting your coroutines into small steps, by that time, this case will more efficient.
 - blocking calls should not happen within async 
+- Multi-Processes cost: each of processes requires memory, especiaaly with the garbage collection and reference counting in python. process were using are not very copy-on-write friendly
