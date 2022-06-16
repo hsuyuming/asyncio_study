@@ -5,6 +5,7 @@ name = "pypi"
 
 [packages]
 uvloop = "*"
+httpx = "*"
 
 [dev-packages]
 
